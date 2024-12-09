@@ -17,7 +17,7 @@
             <input variable="N"/>
             <declare name="v" type="Integer" array="True" size="N"/>
             <assign variable="somma" expression="0"/>
-            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+            <for variable="i" start="0" end="N-6" direction="inc" step="1">
                 <output expression="&quot;Inserire un valore&quot;" newline="True"/>
                 <input variable="v[i]"/>
                 <if expression="i==0">
