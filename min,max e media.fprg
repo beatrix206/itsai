@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="min,max e media"/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-12-04 10:56:42 "/>
+        <attribute name="created" value="dXNlcjtERVNLVE9QLUZFNENWQVE7MjAyNC0xMi0wMjsiMTA6MTY6MjIgIjsyNzAw"/>
+        <attribute name="edited" value="dXNlcjtERVNLVE9QLUZFNENWQVE7MjAyNC0xMi0wNDsiMTA6NTY6NDIgIjsyOzI4MTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="min, max, somma, N, i" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <output expression="&quot;Quanti numeri vuoi interire?&quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="v" type="Integer" array="True" size="N"/>
+            <assign variable="somma" expression="0"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="&quot;Inserire un valore&quot;" newline="True"/>
+                <input variable="v[i]"/>
+                <if expression="i==0">
+                    <then>
+                        <assign variable="min" expression="v[i]"/>
+                        <assign variable="max" expression="v[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="somma" expression="somma+v[i]"/>
+                <if expression="v[i]&lt;min">
+                    <then>
+                        <assign variable="min" expression="v[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="v[i]&gt;max">
+                    <then>
+                        <assign variable="max" expression="v[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="media" expression="somma/N"/>
+            <output expression="&quot;Min  &quot;  &amp;min&amp; &quot;max  &quot;  &amp;max&amp; &quot;media  &quot;  &amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
